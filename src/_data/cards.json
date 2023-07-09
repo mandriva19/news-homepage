@@ -5,6 +5,7 @@
       "imgAlt": "image with restro computers, having dark neon colors",
       "index": "01",
       "title": "Reviving Retro PCs",
+      "link": "#",
       "text": "What happens when old PCs are given modern upgrades?"
     },
     {
@@ -12,6 +13,7 @@
       "imgAlt": "closeup image showing notebooks with rgb lights",
       "index": "02",
       "title": "Top 10 Laptops of 2022",
+      "link": "#",
       "text": "Our best picks for various needs and budgets."
     },
     {
@@ -19,6 +21,7 @@
       "imgAlt": "image showing left hand of person and playstation controller in the air",
       "index": "03",
       "title": "The Growth of Gaming",
+      "link": "#",
       "text": "How the pandemic has sparked fresh opportunities."
     }
   ]
