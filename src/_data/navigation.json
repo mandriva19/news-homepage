@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "title": "home",
+      "url": "#"
+    },
+    {
+      "title": "new",
+      "url": "#"
+    },
+    {
+      "title": "popular",
+      "url": "#"
+    },
+    {
+      "title": "trending",
+      "url": "#"
+    },
+    {
+      "title": "categories",
+      "url": "#"
+    }
+  ]
+}
