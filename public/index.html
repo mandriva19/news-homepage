@@ -4,15 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="app/css/output.css">
     <title>News Homepage | w/ 11ty and tailwind</title>
 </head>
 <body>
      
 
+<header class="relative px-3 py-7">
+  <div class="flex justify-between">
+    <!-- logo -->
+    <a href="#">
+      <img src="assets/images/logo.svg" alt="site logo with big letter W and a dot" />
+    </a>
+
+    <!-- open mobile menu btn -->
+    <button id="menuOpen" class="hover:opacity-80">
+      <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+    </button>
+  </div>
+
+  <!-- overlay when mobileMenu is open -->
+  <div
+    id="mobileOverlay"
+    class="hidden absolute top-0 left-0 bg-black opacity-70 min-h-screen w-full"
+  ></div>
+
+  <!-- mobile menu -->
+  <div
+    id="mobileMenu"
+    class="translate-x-full transition-all duration-300 absolute top-0 right-0 w-2/3 min-h-screen bg-white"
+  >
+    <!-- close btn for closing mobile menu -->
+    <button id="menuClose" class="absolute top-7 right-6">
+      <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
+    </button>
+
+    <!-- mobile menu links -->
+    <ul class="flex flex-col mt-36 items-left gap-4 pl-5">
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >home</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >new</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >popular</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >trending</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >categories</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</header>
 
 
  
 
+    <script src="app/js/main.js"></script>
 </body>
 </html>

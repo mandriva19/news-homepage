@@ -1,0 +1,41 @@
+<header class="relative px-3 py-7">
+  <div class="flex justify-between">
+    <!-- logo -->
+    <a href="#">
+      <img src="{{ logo }}" alt="{{ logoAlt }}" />
+    </a>
+
+    <!-- open mobile menu btn -->
+    <button id="menuOpen" class="hover:opacity-80">
+      {% include "svg/icon-menu.svg" %}
+    </button>
+  </div>
+
+  <!-- overlay when mobileMenu is open -->
+  <div
+    id="mobileOverlay"
+    class="hidden absolute top-0 left-0 bg-black opacity-70 min-h-screen w-full"
+  ></div>
+
+  <!-- mobile menu -->
+  <div
+    id="mobileMenu"
+    class="translate-x-full transition-all duration-300 absolute top-0 right-0 w-2/3 min-h-screen bg-white"
+  >
+    <!-- close btn for closing mobile menu -->
+    <button id="menuClose" class="absolute top-7 right-6">
+      {% include "svg/icon-menu-close.svg" %}
+    </button>
+
+    <!-- mobile menu links -->
+    <ul class="flex flex-col mt-36 items-left gap-4 pl-5">
+      {% for item in navigation.items %}
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="{{ item.url }}"
+          >{{ item.title }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>

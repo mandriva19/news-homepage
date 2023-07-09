@@ -2,8 +2,10 @@
 title: "News Homepage | w/ 11ty and tailwind"
 layout: "layouts/home.html"
 logo: "assets/images/logo.svg"
+logoAlt: "site logo with big letter W and a dot"
 favicon: "assets/images/favicon-32x32.png"
-stylesheet: "css/output.css"
+stylesheet: "app/css/output.css"
+javascript: "app/js/main.js"
 
 hero:
   imgAlt: "colorful image representing web 3"
