@@ -10,6 +10,7 @@ menuOpen.addEventListener("click", function () {
   mobileMenu.classList.remove("translate-x-full");
   mobileMenu.classList.remove("invisible");
   mobileOverlay.classList.remove("hidden");
+  body.style.overflowY = "hidden";
 });
 
 //close menu by clicking close btn
@@ -17,6 +18,7 @@ menuClose.addEventListener("click", function () {
   mobileMenu.classList.add("translate-x-full");
   mobileMenu.classList.add("invisible");
   mobileOverlay.classList.add("hidden");
+  body.style.overflowY = "auto";
 });
 
 //close mobile Menu by clicking outside of it
@@ -25,5 +27,6 @@ mobileOverlay.addEventListener("click", (event) => {
     mobileOverlay.classList.add("hidden");
     mobileMenu.classList.add("invisible");
     mobileMenu.classList.add("translate-x-full");
+    body.style.overflowY = "auto";
   }
 });

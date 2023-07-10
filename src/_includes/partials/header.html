@@ -1,15 +1,39 @@
-<header class="relative px-5 py-7" role="heading">
-  <div class="flex justify-between">
+<header
+  class="relative px-5 md:px-9 lg:px-14 py-7 max-w-[90rem] mx-auto"
+  role="heading"
+>
+  <!-- main flex header contianer -->
+  <div class="flex justify-between items-center">
     <!-- logo -->
     <a href="#">
       <img src="{{ logo }}" alt="{{ logoAlt }}" />
     </a>
 
     <!-- open mobile menu btn -->
-    <button id="menuOpen" class="hover:opacity-80 transition-all duration-200">
+    <button
+      id="menuOpen"
+      class="md:hidden hover:opacity-80 transition-all duration-200"
+    >
       {% include "svg/icon-menu.svg" %}
     </button>
+
+    <!-- desktop menu -->
+    <ul
+      role="navigation"
+      class="hidden md:flex gap-8 text-primaryDarkGrayishBlue"
+    >
+      {% for item in navigation.items %}
+      <li class="capitalize">
+        <a
+          class="hover:text-primaryRed transition-all ease-in duration-75"
+          href="{{ item.url }}"
+          >{{ item.title }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
   </div>
+  <!-- end main container -->
 
   <!-- overlay when mobileMenu is open -->
   <div
@@ -31,7 +55,10 @@
     </button>
 
     <!-- mobile menu items -->
-    <ul role="navigation" class="flex flex-col mt-36 items-left gap-5 pl-5">
+    <ul
+      role="navigation"
+      class="md:hidden flex flex-col mt-36 items-left gap-5 pl-5"
+    >
       {% for item in navigation.items %}
       <li class="text-lg">
         <a class="capitalize text-primaryVeryDarkBlue" href="{{ item.url }}"
