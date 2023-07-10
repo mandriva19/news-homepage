@@ -1,4 +1,4 @@
-<main class="px-5 md:px-9 lg:px-14 max-w-[90rem] mx-auto">
+<main class="px-5 md:px-9 lg:px-14 lg:mt-2 max-w-[90rem] mx-auto">
   <!-- main grid -->
   <div class="grid text-left lg:grid-cols-3 lg:gap-4 lg:grid-flow-row">
     <!-- grid item 1 - img -->
@@ -11,19 +11,20 @@
       <img
         class="hidden md:block"
         src="{{ hero.imgDesktop }}"
-        alt="{{ hero.imgAlt}}"
+        alt="{{ hero.imgAlt }}"
       />
     </div>
+
     <!-- grid item 2 - text/btn -->
     <div class="grid mt-5 md:grid-cols-2 lg:col-span-2 lg:mt-0">
       <h1
-        class="font-extrabold mb-3 text-primaryVeryDarkBlue text-4xl lg:text-5xl md:text-left md:tracking-wide md:w-3/4 md:self-center lg:w-full lg:leading-[1.20]"
+        class="font-extrabold mb-3 text-primaryVeryDarkBlue text-4xl lg:text-5xl md:text-left md:tracking-wide md:w-3/4 md:self-center lg:self-start lg:w-full lg:leading-[1.20] lg:pl-2"
       >
         {{ hero.title }}
       </h1>
 
       <div class="space-y-4 lg:space-y-10">
-        <p class="text-primaryDarkGrayishBlue leading-7 text-[.9375rem]">
+        <p class="my-3 text-primaryDarkGrayishBlue leading-7 text-[.9375rem]">
           {{ hero.summary }}
         </p>
         <button
@@ -34,6 +35,7 @@
         </button>
       </div>
     </div>
+
     <!-- grid item 3 - blog-posts -->
     <div
       class="bg-primaryVeryDarkBlue mt-16 py-4 lg:mt-0 lg:row-start-1 lg:row-end-3 lg:col-start-3"
@@ -56,5 +58,27 @@
       </div>
       {% endfor %}
     </div>
+
+    <!-- 3-cards-section-bottom -->
+    <!-- wrapper -->
+    <section class="my-14 gap-5 grid lg:grid-cols-3 lg:gap-4 lg:col-span-3">
+      {% for item in cards.items %}
+      <!-- card-div -->
+      <div class="flex flex-row gap-2 xl:gap-4">
+        <img class="w-28 h-fit" src="{{ item.img }}" alt="{{ item.imgAlt }}" />
+        <div class="flex flex-col justify-between">
+          <h3 class="text-primaryGrayishBlue font-semibold text-3xl">
+            {{ item.index }}
+          </h3>
+          <a
+            class="font-bold text-lg md:hover:text-primaryRed transition-all ease-in duration-75"
+            href="{{ item.link }}"
+            >{{ item.title }}</a
+          >
+          <p class="text-primaryDarkGrayishBlue">{{ item.text }}</p>
+        </div>
+      </div>
+      {% endfor%}
+    </section>
   </div>
 </main>
