@@ -17,12 +17,13 @@
 
     <!-- grid item 2 - text/btn -->
     <div class="grid mt-5 md:grid-cols-2 lg:col-span-2 lg:mt-0">
+      <!-- title -->
       <h1
         class="font-extrabold mb-3 text-primaryVeryDarkBlue text-4xl lg:text-5xl md:text-left md:tracking-wide md:w-3/4 md:self-center lg:self-start lg:w-full lg:leading-[1.20] lg:pl-2"
       >
         {{ hero.title }}
       </h1>
-
+      <!-- summary and btn -->
       <div class="space-y-4 lg:space-y-10">
         <p class="my-3 text-primaryDarkGrayishBlue leading-7 text-[.9375rem]">
           {{ hero.summary }}
@@ -47,7 +48,7 @@
       </h2>
       {% for item in blog.items %}
       <div
-        class="py-5 px-5 space-y-2 border-t border-primaryDarkGrayishBlue border-opacity-50"
+        class="py-5 lg:py-6 xl:py-8 px-5 space-y-2 border-t border-primaryDarkGrayishBlue border-opacity-50"
       >
         <a
           class="text-primaryOffWhite text-lg font-extrabold md:hover:text-primaryOrange transition-all ease-in duration-75"
@@ -59,12 +60,10 @@
       {% endfor %}
     </div>
 
-    <!-- 3-cards-section-bottom -->
-    <!-- wrapper -->
-    <section class="my-14 gap-5 grid lg:grid-cols-3 lg:gap-4 lg:col-span-3">
+    <!-- grid-item-4 // cards-bottom -->
+    <section class="my-14 gap-8 grid lg:grid-cols-3 lg:gap-4 lg:col-span-3">
       {% for item in cards.items %}
-      <!-- card-div -->
-      <div class="flex flex-row gap-2 xl:gap-4">
+      <div class="flex flex-row gap-4 xl:gap-4">
         <img class="w-28 h-fit" src="{{ item.img }}" alt="{{ item.imgAlt }}" />
         <div class="flex flex-col justify-between">
           <h3 class="text-primaryGrayishBlue font-semibold text-3xl">
