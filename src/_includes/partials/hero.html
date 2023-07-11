@@ -1,8 +1,8 @@
 <main class="px-5 md:px-9 lg:px-14 lg:mt-2 max-w-[90rem] mx-auto">
   <!-- main grid -->
   <div class="grid text-left lg:grid-cols-3 lg:gap-4 lg:grid-flow-row">
-    <!-- grid item 1 - img -->
-    <div class="lg:col-span-2">
+    <!-- grid item 1 - banner -->
+    <div role="banner" class="lg:col-span-2">
       <img
         class="md:hidden"
         src="{{ hero.imgMobile }}"
@@ -24,16 +24,17 @@
         {{ hero.title }}
       </h1>
       <!-- summary and btn -->
-      <div class="space-y-4 lg:space-y-10">
+      <div class="space-y-5 lg:space-y-10">
         <p class="my-3 text-primaryDarkGrayishBlue leading-7 text-[.9375rem]">
           {{ hero.summary }}
         </p>
-        <button
-          class="font-inter uppercase px-7 py-[.875rem] bg-primaryRed text-sm text-primaryOffWhite tracking-[0.25rem] font-bold md:hover:bg-primaryVeryDarkBlue md:hover:text-primaryOffWhite md:transition duration-75 ease-in"
+        <a
+          aria-label="click here to read more about web 3.0"
+          class="inline-block font-inter uppercase px-7 py-[.875rem] bg-primaryRed text-sm text-primaryOffWhite tracking-[0.25rem] font-bold md:hover:bg-primaryVeryDarkBlue md:hover:text-primaryOffWhite md:transition duration-75 ease-in"
           href="{{ hero.btnLink }}"
         >
           {{ hero.btnText }}
-        </button>
+        </a>
       </div>
     </div>
 
@@ -61,7 +62,10 @@
     </div>
 
     <!-- grid-item-4 // cards-bottom -->
-    <section class="my-14 gap-8 grid lg:grid-cols-3 lg:gap-4 lg:col-span-3">
+    <section
+      role="contentinfo"
+      class="my-14 gap-8 grid lg:grid-cols-3 lg:gap-4 lg:col-span-3"
+    >
       {% for item in cards.items %}
       <div class="flex flex-row gap-4 xl:gap-4">
         <img class="w-28 h-fit" src="{{ item.img }}" alt="{{ item.imgAlt }}" />
@@ -80,4 +84,5 @@
       {% endfor%}
     </section>
   </div>
+  <!-- End main grid -->
 </main>
