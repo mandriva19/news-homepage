@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="app/css/output.css">
+    <title>News Homepage | w/ 11ty and tailwind</title>
+</head>
+<body class="overflow-x-hidden bg-primaryOffWhite">
+     
+
+<header
+  class="relative px-5 md:px-9 lg:px-14 pt-6 md:pt-8 lg:pt-10 pb-7 max-w-[90rem] mx-auto"
+>
+  <!-- main flex header container -->
+  <div class="flex justify-between items-center">
+    <!-- logo -->
+    <a href="./index.html">
+      <img src="assets/images/logo.svg" alt="site logo with big letter W and a dot" />
+    </a>
+
+    <!-- button: open mobile menu  -->
+    <button
+      aria-label="Click to open mobile menu"
+      id="menuOpen"
+      class="md:hidden hover:opacity-80 transition-all duration-200"
+    >
+      <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+    </button>
+
+    <!-- desktop menu -->
+    <ul class="hidden md:flex gap-8 text-primaryDarkGrayishBlue">
+      
+      <li class="capitalize">
+        <a
+          class="hover:text-primaryRed transition-all ease-in duration-75"
+          href="#"
+          >home</a
+        >
+      </li>
+      
+      <li class="capitalize">
+        <a
+          class="hover:text-primaryRed transition-all ease-in duration-75"
+          href="#"
+          >new</a
+        >
+      </li>
+      
+      <li class="capitalize">
+        <a
+          class="hover:text-primaryRed transition-all ease-in duration-75"
+          href="#"
+          >popular</a
+        >
+      </li>
+      
+      <li class="capitalize">
+        <a
+          class="hover:text-primaryRed transition-all ease-in duration-75"
+          href="#"
+          >trending</a
+        >
+      </li>
+      
+      <li class="capitalize">
+        <a
+          class="hover:text-primaryRed transition-all ease-in duration-75"
+          href="#"
+          >categories</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+  <!-- end main container -->
+
+  <!-- overlay when mobileMenu is open -->
+  <div
+    id="mobileOverlay"
+    class="hidden absolute top-0 left-0 bg-black opacity-70 min-h-screen w-full"
+  ></div>
+
+  <!-- mobile menu -->
+  <div
+    role="menu"
+    id="mobileMenu"
+    class="translate-x-full invisible transition-all duration-300 absolute top-0 right-0 w-3/4 min-h-screen bg-white"
+  >
+    <!-- button: close mobile menu -->
+    <button
+      aria-label="Click to close mobile menu"
+      id="menuClose"
+      class="absolute top-8 right-6 opacity-80 hover:opacity-100 transition-all duration-200"
+    >
+      <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
+    </button>
+
+    <!-- mobile menu items -->
+    <ul class="md:hidden flex flex-col mt-36 items-left gap-5 pl-5">
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >home</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >new</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >popular</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >trending</a
+        >
+      </li>
+      
+      <li class="text-lg">
+        <a class="capitalize text-primaryVeryDarkBlue" href="#"
+          >categories</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</header>
+
+<main class="px-5 md:px-9 lg:px-14 lg:mt-2 max-w-[90rem] mx-auto">
+  <!-- main grid -->
+  <div class="grid text-left lg:grid-cols-3 lg:gap-4 lg:grid-flow-row">
+    <!-- grid item 1 - banner -->
+    <div role="banner" class="lg:col-span-2">
+      <img
+        class="md:hidden"
+        src="assets/images/image-web-3-mobile.jpg"
+        alt="colorful image representing web 3"
+      />
+      <img
+        class="hidden md:block"
+        src="assets/images/image-web-3-desktop.jpg"
+        alt="colorful image representing web 3"
+      />
+    </div>
+
+    <!-- grid item 2 - text/btn -->
+    <div class="grid mt-5 md:grid-cols-2 lg:col-span-2 lg:mt-0">
+      <!-- title -->
+      <h1
+        class="font-extrabold mb-3 text-primaryVeryDarkBlue text-4xl lg:text-5xl md:text-left md:tracking-wide md:w-3/4 md:self-center lg:self-start lg:w-full lg:leading-[1.20] lg:pl-2"
+      >
+        The Bright Future of Web 3.0?
+      </h1>
+      <!-- summary and btn -->
+      <div class="space-y-5 lg:space-y-10">
+        <p class="my-3 text-primaryDarkGrayishBlue leading-7 text-[.9375rem]">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.  But is it really fulfilling its promise?
+        </p>
+        <a
+          aria-label="click here to read more about web 3.0"
+          class="inline-block font-inter uppercase px-7 py-[.875rem] bg-primaryRed text-sm text-primaryOffWhite tracking-[0.25rem] font-bold md:hover:bg-primaryVeryDarkBlue md:hover:text-primaryOffWhite md:transition duration-75 ease-in"
+          href="#"
+        >
+          read more
+        </a>
+      </div>
+    </div>
+
+    <!-- grid item 3 - blog-posts -->
+    <div
+      class="bg-primaryVeryDarkBlue mt-16 py-4 lg:mt-0 lg:row-start-1 lg:row-end-3 lg:col-start-3"
+    >
+      <h2
+        class="px-5 py-3 text-3xl text-primaryOrange font-extrabold lg:py-5 lg:text-4xl"
+      >
+        New
+      </h2>
+      
+      <div
+        class="py-5 lg:py-6 xl:py-8 px-5 space-y-2 border-t border-primaryDarkGrayishBlue border-opacity-50"
+      >
+        <a
+          class="text-primaryOffWhite text-lg font-extrabold md:hover:text-primaryOrange transition-all ease-in duration-75"
+          href="#"
+          >Hydrogen VS Electric Cars</a
+        >
+        <p class="text-sm text-primaryGrayishBlue">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </div>
+      
+      <div
+        class="py-5 lg:py-6 xl:py-8 px-5 space-y-2 border-t border-primaryDarkGrayishBlue border-opacity-50"
+      >
+        <a
+          class="text-primaryOffWhite text-lg font-extrabold md:hover:text-primaryOrange transition-all ease-in duration-75"
+          href="#"
+          >The downsides of AI Artistry</a
+        >
+        <p class="text-sm text-primaryGrayishBlue">What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+      
+      <div
+        class="py-5 lg:py-6 xl:py-8 px-5 space-y-2 border-t border-primaryDarkGrayishBlue border-opacity-50"
+      >
+        <a
+          class="text-primaryOffWhite text-lg font-extrabold md:hover:text-primaryOrange transition-all ease-in duration-75"
+          href="#"
+          >Is VC Funding Drying Up?</a
+        >
+        <p class="text-sm text-primaryGrayishBlue">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+      
+    </div>
+
+    <!-- grid-item-4 // cards-bottom -->
+    <section
+      role="contentinfo"
+      class="my-14 gap-8 grid lg:grid-cols-3 lg:gap-4 lg:col-span-3"
+    >
+      
+      <div class="flex flex-row gap-4 xl:gap-4">
+        <img class="w-28 h-fit" src="assets/images/image-retro-pcs.jpg" alt="image with restro computers, having dark neon colors" />
+        <div class="flex flex-col justify-between">
+          <h3 class="text-primaryGrayishBlue font-semibold text-3xl">
+            01
+          </h3>
+          <a
+            class="font-bold text-lg md:hover:text-primaryRed transition-all ease-in duration-75"
+            href="#"
+            >Reviving Retro PCs</a
+          >
+          <p class="text-primaryDarkGrayishBlue">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      
+      <div class="flex flex-row gap-4 xl:gap-4">
+        <img class="w-28 h-fit" src="assets/images/image-top-laptops.jpg" alt="closeup image showing notebooks with rgb lights" />
+        <div class="flex flex-col justify-between">
+          <h3 class="text-primaryGrayishBlue font-semibold text-3xl">
+            02
+          </h3>
+          <a
+            class="font-bold text-lg md:hover:text-primaryRed transition-all ease-in duration-75"
+            href="#"
+            >Top 10 Laptops of 2022</a
+          >
+          <p class="text-primaryDarkGrayishBlue">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      
+      <div class="flex flex-row gap-4 xl:gap-4">
+        <img class="w-28 h-fit" src="assets/images/image-gaming-growth.jpg" alt="image showing left hand of person and playstation controller in the air" />
+        <div class="flex flex-col justify-between">
+          <h3 class="text-primaryGrayishBlue font-semibold text-3xl">
+            03
+          </h3>
+          <a
+            class="font-bold text-lg md:hover:text-primaryRed transition-all ease-in duration-75"
+            href="#"
+            >The Growth of Gaming</a
+          >
+          <p class="text-primaryDarkGrayishBlue">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+  <!-- End main grid -->
+</main>
+
+<footer class="max-w-[90rem] mx-auto">
+  <div class="text-sm opacity-70 text-center mt-12 mb-3">
+    Challenge by
+    <a
+      class="underline md:hover:text-primaryRed"
+      href="https://www.frontendmentor.io?ref=challenge"
+      >Frontend Mentor</a
+    >. Coded by
+    <a
+      class="underline md:hover:text-primaryRed"
+      href="https://github.com/mandriva19"
+      >Mandriva19</a
+    >.
+  </div>
+</footer>
+
+
+ 
+
+    <script src="app/js/main.js"></script>
+</body>
+</html>
