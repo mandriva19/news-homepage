@@ -605,6 +605,11 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mb-3{
   margin-bottom: 0.75rem;
 }
@@ -619,6 +624,14 @@ video {
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .block{
@@ -759,6 +772,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-primaryOrange{
+  --tw-bg-opacity: 1;
+  background-color: hsl(35 77% 62% / var(--tw-bg-opacity));
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -789,6 +807,11 @@ video {
   padding-bottom: .875rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pb-7{
   padding-bottom: 1.75rem;
 }
@@ -801,8 +824,32 @@ video {
   padding-top: 1.5rem;
 }
 
+.pt-12{
+  padding-top: 3rem;
+}
+
+.pr-12{
+  padding-right: 3rem;
+}
+
+.pr-14{
+  padding-right: 3.5rem;
+}
+
+.pr-5{
+  padding-right: 1.25rem;
+}
+
 .text-left{
   text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .font-inter{
@@ -886,12 +933,20 @@ video {
   color: hsl(240 100% 5% / var(--tw-text-opacity));
 }
 
+.underline{
+  text-decoration-line: underline;
+}
+
 .opacity-70{
   opacity: 0.7;
 }
 
 .opacity-80{
   opacity: 0.8;
+}
+
+.opacity-40{
+  opacity: 0.4;
 }
 
 .transition-all{
@@ -952,6 +1007,11 @@ body {
 }
 
 @media (min-width: 725px){
+  .md\:mx-8{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -979,6 +1039,11 @@ body {
   .md\:px-9{
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+  }
+
+  .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:pt-8{
@@ -1043,6 +1108,11 @@ body {
     grid-row-end: 3;
   }
 
+  .lg\:mx-12{
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   .lg\:mt-0{
     margin-top: 0px;
   }
@@ -1092,12 +1162,21 @@ body {
     padding-bottom: 1.5rem;
   }
 
+  .lg\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:pl-2{
     padding-left: 0.5rem;
   }
 
   .lg\:pt-10{
     padding-top: 2.5rem;
+  }
+
+  .lg\:pr-14{
+    padding-right: 3.5rem;
   }
 
   .lg\:text-4xl{
