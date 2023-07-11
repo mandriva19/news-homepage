@@ -27,3 +27,8 @@ building projects even more then before!
 Even this is fairly simple layout I still spent quite a lot of time building it. if I had 10% clue about grid before now I probably have 16 %.
 
 and I'm still awful at styling focus states.
+
+#deployment
+
+I wasn't able to properly deploy this project using Netlify CLI. For some reason the GitHub token was throwing errors during the deployment with terminal.
+i'm all new to this. So I created side branch for the project and manually uploaded "public" directory So I can put it in the Solution at FrontEndMentor live-url.
