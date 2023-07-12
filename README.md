@@ -4,11 +4,7 @@ Mobile-first News Homepage landing. A challenge from frontendmentor.io. Built wi
 
 # 11ty
 
-I heard about eleventy earlier this year. But I guess I wasn't quite ready to try it out. Then on FrontEndMentor a user was using it and I explored about it lot more. and Played around with it.
-
-I love it.
-
-Main purpose of using 11ty instead of plain HTML is I like my projects structured well. Even if it's a small page like this one.
+the purpose of using 11ty in this project instead of plain HTML is I like my projects structured well. Even if it's a small page like this one.
 I like having files organized as partials and I enjoy looping through identical data from .json files.
 
 Eleventy is easy to use and gives you many superpowers.
